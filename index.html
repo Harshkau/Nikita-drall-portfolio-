@@ -1,0 +1,2030 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikita Drall | Premium Futuristic Digital Marketing Portfolio</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Nikita Drall, Digital Marketing Executive specializing in social media management, content creation, branding, and SEO.">
+  <meta name="keywords" content="Nikita Drall, Digital Marketing, Social Media Specialist, Brand Growth, SEO, Canva Creator">
+  
+  <!-- Tailwind CSS v4 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Google Fonts: Space Grotesk (Futuristic headings) & Poppins (Elegant text) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* Custom CSS variables for Neon Theme Accent Switching */
+    :root {
+      --color-primary-glow: #ec4899; /* pink-500 */
+      --color-secondary-glow: #f97316; /* orange-500 */
+      --color-accent-glow: #a855f7; /* purple-500 */
+      --glow-rgb-primary: 236, 72, 153;
+      --glow-rgb-secondary: 249, 115, 22;
+      --glow-rgb-accent: 168, 85, 247;
+      --gradient-base: linear-gradient(135deg, var(--color-primary-glow), var(--color-secondary-glow));
+    }
+
+    /* Ambient Theme Presets */
+    [data-theme="cyberpunk"] {
+      --color-primary-glow: #ec4899;
+      --color-secondary-glow: #ff7e40;
+      --color-accent-glow: #a855f7;
+      --glow-rgb-primary: 236, 72, 153;
+      --glow-rgb-secondary: 255, 126, 64;
+      --glow-rgb-accent: 168, 85, 247;
+    }
+
+    [data-theme="solargold"] {
+      --color-primary-glow: #eab308; /* gold */
+      --color-secondary-glow: #f97316; /* orange */
+      --color-accent-glow: #ef4444; /* rose */
+      --glow-rgb-primary: 234, 179, 8;
+      --glow-rgb-secondary: 249, 115, 22;
+      --glow-rgb-accent: 239, 68, 68;
+    }
+
+    [data-theme="amethyst"] {
+      --color-primary-glow: #8b5cf6; /* violet */
+      --color-secondary-glow: #ec4899; /* pink */
+      --color-accent-glow: #3b82f6; /* blue */
+      --glow-rgb-primary: 139, 92, 246;
+      --glow-rgb-secondary: 236, 72, 153;
+      --glow-rgb-accent: 59, 130, 246;
+    }
+
+    /* Global settings */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #030303;
+      color: #f3f4f6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .font-space {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .font-orbitron {
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    /* Custom Glassmorphism styling */
+    .glass-card {
+      background: rgba(10, 10, 10, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(var(--glow-rgb-primary), 0.35);
+      box-shadow: 0 10px 30px -10px rgba(var(--glow-rgb-primary), 0.2);
+    }
+
+    /* Double Border Glowing Cards */
+    .glow-card {
+      position: relative;
+      border-radius: 25px;
+      overflow: hidden;
+      background: rgba(6, 6, 6, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .glow-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border-radius: inherit;
+      padding: 1.5px;
+      background: linear-gradient(135deg, rgba(var(--glow-rgb-primary), 0.5), rgba(var(--glow-rgb-secondary), 0.1), rgba(var(--glow-rgb-accent), 0.5));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0.3;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .glow-card:hover::before {
+      opacity: 1;
+    }
+
+    .glow-card:hover {
+      box-shadow: 0 12px 40px -12px rgba(var(--glow-rgb-primary), 0.3);
+      border-color: rgba(var(--glow-rgb-primary), 0.2);
+    }
+
+    /* Ambient dynamic background gradient blobs */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      z-index: 0;
+      opacity: 0.4;
+      pointer-events: none;
+      animation: floatBlob 25s infinite alternate ease-in-out;
+    }
+
+    @keyframes floatBlob {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(100px, 80px) scale(1.2); }
+      100% { transform: translate(-50px, 150px) scale(0.9); }
+    }
+
+    /* Custom Cursor */
+    .custom-cursor {
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      border-radius: 50%;
+      position: fixed;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 9999;
+      mix-blend-mode: difference;
+      transition: width 0.2s, height 0.2s;
+    }
+
+    .custom-cursor-blur {
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(var(--glow-rgb-primary), 0.5);
+      border-radius: 50%;
+      position: fixed;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 9998;
+      box-shadow: 0 0 15px rgba(var(--glow-rgb-primary), 0.2);
+      transition: width 0.3s, height 0.3s, border-color 0.3s;
+    }
+
+    /* Hide standard cursor for clean premium feel on desktop */
+    @media (min-width: 1024px) {
+      body {
+        cursor: none;
+      }
+      a, button, select, input, textarea, [role="button"] {
+        cursor: none;
+      }
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #030303;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(to bottom, var(--color-primary-glow), var(--color-secondary-glow));
+    }
+
+    /* Progress bar glow */
+    .progress-glow {
+      box-shadow: 0 0 10px rgba(var(--glow-rgb-primary), 0.5);
+    }
+
+    /* Tilt Card styling */
+    .tilt-card {
+      transform-style: preserve-3d;
+      transform: perspective(1000px);
+    }
+
+    /* Glowing Badge Pulsing effect */
+    .glowing-dot {
+      animation: pulseGlow 1.5s infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 4px rgba(34, 197, 94, 0.5); }
+      100% { box-shadow: 0 0 16px rgba(34, 197, 94, 0.9); }
+    }
+
+    /* Scroll Reveal Transition styling */
+    .reveal-element {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .reveal-element.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Neon Text Stroke - Updated to be ultra-clear and high contrast */
+    .text-stroke-glow {
+      text-shadow: none;
+      filter: drop-shadow(0 2px 8px rgba(var(--glow-rgb-primary), 0.25));
+    }
+
+    /* Social Estimator Custom Sliders styling */
+    input[type=range] {
+      -webkit-appearance: none;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      height: 6px;
+      border-radius: 10px;
+      outline: none;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--gradient-base);
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(var(--glow-rgb-primary), 0.8);
+      transition: transform 0.1s ease;
+    }
+    input[type=range]::-webkit-slider-thumb:hover {
+      transform: scale(1.3);
+    }
+
+    /* Rotating background pattern */
+    .bg-pattern {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+  </style>
+</head>
+<body class="bg-[#030303] text-gray-200 overflow-x-hidden antialiased">
+
+  <!-- Interactive Desktop Cursor -->
+  <div class="custom-cursor hidden lg:block" id="cursor"></div>
+  <div class="custom-cursor-blur hidden lg:block" id="cursor-blur"></div>
+
+  <!-- Loading Animation screen -->
+  <div id="preloader" class="fixed inset-0 bg-[#020202] z-[99999] flex flex-col items-center justify-center transition-all duration-700">
+    <div class="relative flex flex-col items-center">
+      <!-- Monogram ND animation -->
+      <div class="w-24 h-24 rounded-full flex items-center justify-center relative mb-8">
+        <div class="absolute inset-0 rounded-full border-2 border-dashed border-primary-glow animate-spin" style="animation-duration: 10s;"></div>
+        <div class="absolute inset-2 rounded-full border border-secondary-glow animate-spin" style="animation-duration: 4s; animation-direction: reverse;"></div>
+        <div class="absolute -inset-1 rounded-full bg-gradient-to-tr from-primary-glow to-secondary-glow opacity-20 blur-md animate-pulse"></div>
+        <span class="text-3xl font-orbitron font-extrabold tracking-wider bg-gradient-to-r from-primary-glow to-secondary-glow bg-clip-text text-transparent">ND</span>
+      </div>
+      
+      <div class="text-center">
+        <div class="text-xs uppercase tracking-[0.3em] text-primary-glow font-orbitron mb-2 animate-pulse" id="preloader-status">Initializing Neural Systems...</div>
+        <!-- Progress Bar container -->
+        <div class="w-64 h-[2px] bg-white/5 rounded-full overflow-hidden relative mb-4">
+          <div id="preloader-bar" class="h-full w-0 bg-gradient-to-r from-primary-glow via-secondary-glow to-accent-glow transition-all duration-200"></div>
+        </div>
+        <div class="text-4xl font-space font-bold tracking-widest text-white" id="preloader-percentage">00%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ambient Interactive Canvas Background -->
+  <canvas id="particle-canvas" class="fixed inset-0 pointer-events-none z-[1] opacity-75"></canvas>
+
+  <!-- Ambient Blobs -->
+  <div class="blob bg-primary-glow w-[300px] md:w-[500px] h-[300px] md:h-[500px] top-[-10%] left-[-10%]" style="animation-duration: 20s;"></div>
+  <div class="blob bg-accent-glow w-[350px] md:w-[600px] h-[350px] md:h-[600px] top-[40%] right-[-10%]" style="animation-duration: 25s; animation-delay: 2s;"></div>
+  <div class="blob bg-secondary-glow w-[250px] md:w-[450px] h-[250px] md:h-[450px] bottom-[-5%] left-[20%]" style="animation-duration: 18s; animation-delay: 5s;"></div>
+
+  <div class="relative z-10 bg-pattern min-h-screen">
+
+    <!-- STICKY NAVBAR -->
+    <nav class="sticky top-0 z-[100] w-full border-b border-white/5 bg-[#030303]/60 backdrop-blur-md transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          
+          <!-- Logo & Branding -->
+          <a href="#" class="flex items-center space-x-3 group">
+            <div class="relative w-11 h-11 rounded-full flex items-center justify-center bg-white/5 border border-white/10 group-hover:border-primary-glow transition-all duration-500 overflow-hidden">
+              <!-- Glow gradient background on hover -->
+              <div class="absolute inset-0 bg-gradient-to-tr from-primary-glow to-secondary-glow opacity-0 group-hover:opacity-20 transition-all duration-500"></div>
+              <span class="text-base font-orbitron font-black bg-gradient-to-r from-primary-glow to-secondary-glow bg-clip-text text-transparent">ND</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-sm font-bold tracking-widest font-space text-white group-hover:text-primary-glow transition-all duration-300">NIKITA DRALL</span>
+              <span class="text-[9px] uppercase tracking-[0.25em] text-secondary-glow/90 font-medium">Digital Marketer</span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#about" class="text-xs uppercase tracking-widest text-gray-300 hover:text-white transition-all font-space">About</a>
+            <a href="#skills" class="text-xs uppercase tracking-widest text-gray-300 hover:text-white transition-all font-space">Skills</a>
+            <a href="#experience" class="text-xs uppercase tracking-widest text-gray-300 hover:text-white transition-all font-space">Experience</a>
+            <a href="#projects" class="text-xs uppercase tracking-widest text-gray-300 hover:text-white transition-all font-space">Projects</a>
+            <a href="#estimator" class="text-xs uppercase tracking-widest text-gray-300 hover:text-white transition-all font-space">Growth Tool</a>
+            <a href="#contact" class="text-xs uppercase tracking-widest px-4 py-2 rounded-full border border-white/10 bg-white/5 hover:border-primary-glow hover:bg-primary-glow/10 text-white transition-all font-space">Contact</a>
+          </div>
+
+          <!-- Right side Actions (Theme Toggle + Burger) -->
+          <div class="flex items-center space-x-4">
+            
+            <!-- Multi-Theme Cycle Selector -->
+            <button id="theme-cycle-btn" aria-label="Cycle Ambient Aura" title="Cycle Ambient Aura" class="p-2.5 rounded-full border border-white/5 bg-white/5 hover:border-primary-glow text-gray-400 hover:text-white transition-all duration-300 relative group overflow-hidden">
+              <span class="absolute inset-0 bg-gradient-to-tr from-primary-glow to-secondary-glow opacity-0 group-hover:opacity-10 transition-all duration-300"></span>
+              <i class="fa-solid fa-palette text-sm animate-pulse text-primary-glow"></i>
+            </button>
+
+            <!-- Hamburger Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-full border border-white/5 bg-white/5 hover:bg-white/10 text-gray-300 transition-all focus:outline-none" aria-label="Toggle Menu">
+              <div class="w-5 h-5 flex flex-col justify-between items-center relative">
+                <span id="burger-top" class="w-full h-[2px] bg-white rounded transition-transform duration-300 origin-center"></span>
+                <span id="burger-mid" class="w-full h-[2px] bg-white rounded transition-opacity duration-300"></span>
+                <span id="burger-bot" class="w-full h-[2px] bg-white rounded transition-transform duration-300 origin-center"></span>
+              </div>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-[#050505]/95 border-b border-white/5 backdrop-blur-xl transition-all duration-300 py-6 px-6 space-y-4">
+        <a href="#about" class="mobile-nav-link block py-2.5 px-4 rounded-xl hover:bg-white/5 text-sm uppercase tracking-widest text-gray-300 hover:text-white font-space">About</a>
+        <a href="#skills" class="mobile-nav-link block py-2.5 px-4 rounded-xl hover:bg-white/5 text-sm uppercase tracking-widest text-gray-300 hover:text-white font-space">Skills</a>
+        <a href="#experience" class="mobile-nav-link block py-2.5 px-4 rounded-xl hover:bg-white/5 text-sm uppercase tracking-widest text-gray-300 hover:text-white font-space">Experience</a>
+        <a href="#projects" class="mobile-nav-link block py-2.5 px-4 rounded-xl hover:bg-white/5 text-sm uppercase tracking-widest text-gray-300 hover:text-white font-space">Projects</a>
+        <a href="#estimator" class="mobile-nav-link block py-2.5 px-4 rounded-xl hover:bg-white/5 text-sm uppercase tracking-widest text-gray-300 hover:text-white font-space">Growth Tool</a>
+        <a href="#contact" class="mobile-nav-link block py-2.5 px-4 rounded-xl bg-gradient-to-r from-primary-glow/10 to-secondary-glow/10 border border-primary-glow/30 text-center text-sm uppercase tracking-widest text-white font-space">Contact Nikita</a>
+      </div>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <header class="relative pt-10 pb-20 md:pt-16 md:pb-32 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Freelance Availability Glowing Badge -->
+        <div class="flex justify-center md:justify-start mb-8 reveal-element" style="transition-delay: 100ms;">
+          <div class="inline-flex items-center space-x-3 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/5 text-xs font-semibold tracking-wider text-emerald-400 backdrop-blur-md">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 glowing-dot"></span>
+            <span>AVAILABLE FOR FREELANCE & FULL-TIME POSITIONS</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Hero Copy Text Column -->
+          <div class="lg:col-span-7 text-center md:text-left space-y-6">
+            
+            <div class="space-y-2 reveal-element" style="transition-delay: 200ms;">
+              <span class="text-xs md:text-sm font-semibold tracking-[0.4em] bg-gradient-to-r from-primary-glow to-secondary-glow bg-clip-text text-transparent uppercase block font-space">
+                ELEVATING BRANDS DIGITALLY
+              </span>
+              <h1 class="text-5xl sm:text-7xl lg:text-[5.5rem] xl:text-[7.5rem] font-black font-space leading-[0.9] tracking-tight uppercase">
+                <span class="text-white block">NIKITA</span>
+                <span class="text-red-500 block py-1">DRALL</span>
+              </h1>
+              <h2 class="text-lg md:text-xl font-orbitron font-semibold tracking-widest text-gray-400 uppercase mt-4">
+                Digital Marketing Executive
+              </h2>
+            </div>
+
+            <p class="text-sm md:text-base text-gray-400 max-w-xl mx-auto md:mx-0 leading-relaxed font-light reveal-element" style="transition-delay: 300ms;">
+              Creative and result-oriented Digital Marketing Executive with experience in social media management, content creation, branding, and SEO basics. Inspired by premium growth aesthetics and data-driven engagement strategies.
+            </p>
+
+            <!-- Call to Actions -->
+            <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4 reveal-element" style="transition-delay: 400ms;">
+              
+              <!-- Primary CTA (View Portfolio) -->
+              <a href="#projects" class="w-full sm:w-auto relative group overflow-hidden rounded-full p-[1.5px] focus:outline-none transition-all duration-300">
+                <span class="absolute inset-0 bg-gradient-to-r from-primary-glow via-secondary-glow to-accent-glow rounded-full"></span>
+                <div class="px-8 py-3.5 rounded-full bg-[#030303] text-sm font-bold tracking-widest font-space text-white relative transition-all duration-300 group-hover:bg-transparent">
+                  VIEW PORTFOLIO
+                </div>
+              </a>
+
+              <!-- Secondary CTA (Contact Me) -->
+              <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full border border-white/15 bg-white/5 hover:border-primary-glow hover:bg-primary-glow/5 text-sm font-bold tracking-widest font-space text-white transition-all duration-300 text-center">
+                CONTACT ME
+              </a>
+            </div>
+
+          </div>
+
+           <!-- Hero Creative Graphic & Portrait Column -->
+          <div class="lg:col-span-5 flex justify-center items-center relative reveal-element" style="transition-delay: 500ms;">
+            <div class="relative w-60 h-60 min-[375px]:w-72 min-[375px]:h-72 sm:w-80 sm:h-80 md:w-[380px] md:h-[380px]">
+              
+              <!-- Orbit Rings -->
+              <div class="absolute inset-[-10px] rounded-full border border-white/5 animate-spin" style="animation-duration: 25s;"></div>
+              <div class="absolute inset-[-20px] rounded-full border border-dashed border-white/10 animate-spin" style="animation-duration: 15s; animation-direction: reverse;"></div>
+              
+              <!-- Neon Glow behind profile -->
+              <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-glow via-secondary-glow to-accent-glow opacity-20 blur-xl"></div>
+              
+              <!-- Main Glowing Portrait Container -->
+              <div class="w-full h-full rounded-full p-2 bg-gradient-to-tr from-primary-glow to-secondary-glow shadow-2xl relative z-10">
+                <div class="w-full h-full rounded-full overflow-hidden bg-[#0a0a0a] border-4 border-[#030303]">
+                  <!-- Premium Headshot Portrait -->
+                  <img src="https://i.pinimg.com/originals/4d/9b/f5/4d9bf5231cba5b40bb775994444f0ba3.jpg" 
+                       alt="Nikita Drall" 
+                       class="w-full h-full object-cover scale-100 hover:scale-105 transition-transform duration-700">
+                </div>
+              </div>
+
+              <!-- Floating Badge 1: Engagement Specialist -->
+              <div class="absolute -top-4 -left-2 sm:-left-10 bg-black/80 backdrop-blur-md border border-white/10 px-3 py-1.5 sm:px-4 sm:py-2 rounded-2xl shadow-xl z-20 flex items-center space-x-2 animate-bounce hover:scale-105 transition-transform" style="animation-duration: 5s;">
+                <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-primary-glow/20 flex items-center justify-center text-primary-glow text-xs">
+                  <i class="fa-solid fa-users text-[10px] sm:text-xs"></i>
+                </span>
+                <div class="flex flex-col text-left">
+                  <span class="text-[8px] sm:text-[9px] uppercase tracking-wider text-gray-500 font-bold">Focus</span>
+                  <span class="text-[10px] sm:text-xs font-semibold text-white font-space">Engagement Specialist</span>
+                </div>
+              </div>
+
+              <!-- Floating Badge 2: Canva Certified Creator -->
+              <div class="absolute top-[40%] -right-2 sm:-right-16 bg-black/80 backdrop-blur-md border border-white/10 px-3 py-1.5 sm:px-4 sm:py-2 rounded-2xl shadow-xl z-20 flex items-center space-x-2 animate-bounce hover:scale-105 transition-transform" style="animation-duration: 6s; animation-delay: 1.5s;">
+                <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-secondary-glow/20 flex items-center justify-center text-secondary-glow text-xs">
+                  <i class="fa-solid fa-palette text-[10px] sm:text-xs"></i>
+                </span>
+                <div class="flex flex-col text-left">
+                  <span class="text-[8px] sm:text-[9px] uppercase tracking-wider text-gray-500 font-bold">Design</span>
+                  <span class="text-[10px] sm:text-xs font-semibold text-white font-space">Canva Creator</span>
+                </div>
+              </div>
+
+              <!-- Floating Badge 3: Brand Growth Expert -->
+              <div class="absolute -bottom-6 left-2 sm:left-6 bg-black/80 backdrop-blur-md border border-white/10 px-3 py-1.5 sm:px-4 sm:py-2 rounded-2xl shadow-xl z-20 flex items-center space-x-2 animate-bounce hover:scale-105 transition-transform" style="animation-duration: 7s; animation-delay: 0.5s;">
+                <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-accent-glow/20 flex items-center justify-center text-accent-glow text-xs">
+                  <i class="fa-solid fa-chart-line text-[10px] sm:text-xs"></i>
+                </span>
+                <div class="flex flex-col text-left">
+                  <span class="text-[8px] sm:text-[9px] uppercase tracking-wider text-gray-500 font-bold">Strategy</span>
+                  <span class="text-[10px] sm:text-xs font-semibold text-white font-space">Brand Growth Expert</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 md:py-32 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+          <span class="text-xs font-bold tracking-[0.4em] text-primary-glow uppercase block mb-2 font-space">IDENTITY PROFILE</span>
+          <h2 class="text-3xl sm:text-5xl font-bold font-space uppercase text-white">THE CREATIVE MINDFRAME</h2>
+          <div class="w-16 h-[2px] bg-gradient-to-r from-primary-glow to-secondary-glow mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          <!-- Summary Glass Card -->
+          <div class="lg:col-span-7 glow-card p-8 md:p-10 flex flex-col justify-between reveal-element" style="transition-delay: 100ms;">
+            <div class="space-y-6">
+              <div class="w-12 h-12 rounded-2xl bg-primary-glow/10 border border-primary-glow/30 flex items-center justify-center text-primary-glow">
+                <i class="fa-solid fa-quote-left text-lg"></i>
+              </div>
+              <h3 class="text-2xl font-bold font-space text-white leading-tight">
+                Empowering digital storefronts & personal brands with premium engagement.
+              </h3>
+              <p class="text-sm md:text-base text-gray-400 leading-relaxed font-light">
+                I am a dedicated, career-focused Digital Marketing professional driven by creativity, analytics, and social trends. Recognizing that contemporary marketing requires a synthesis of sleek visual assets and optimized backend parameters, I specialize in crafting attractive creatives while leveraging fundamental SEO and algorithmic insights to secure target audience focus.
+              </p>
+              <p class="text-sm md:text-base text-gray-400 leading-relaxed font-light">
+                Whether deploying campaigns on Facebook and Instagram, constructing highly engaging visual collateral in Canva, or optimizing blog structures for search engine relevancy, my focus remains constant: **growth, visual distinction, and premium performance**.
+              </p>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
+              <span class="text-xs uppercase tracking-widest text-gray-500 font-space">Nikita Drall Profile Summary</span>
+              <span class="text-xs font-semibold text-primary-glow font-space tracking-wider">EXEC // v2.6.2</span>
+            </div>
+          </div>
+
+           <!-- Stats Panel Cards -->
+          <div class="lg:col-span-5 grid grid-cols-2 gap-4 items-stretch">
+            
+            <!-- Stat Card 1 -->
+            <div class="glow-card p-4 sm:p-6 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 200ms;">
+              <span class="text-xs uppercase tracking-widest text-gray-500 font-space font-medium">Completed</span>
+              <div class="my-4">
+                <span class="text-4xl sm:text-5xl font-black font-space text-white" data-target="5">0</span>
+                <span class="text-2xl font-bold text-primary-glow font-space">+</span>
+              </div>
+              <p class="text-xs text-gray-400 font-light">Marketing & branding projects successfully compiled.</p>
+            </div>
+
+            <!-- Stat Card 2 -->
+            <div class="glow-card p-4 sm:p-6 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 300ms;">
+              <span class="text-xs uppercase tracking-widest text-gray-500 font-space font-medium">Experience</span>
+              <div class="my-4">
+                <span class="text-4xl sm:text-5xl font-black font-space text-white" data-target="3">0</span>
+                <span class="text-2xl font-bold text-secondary-glow font-space">+</span>
+              </div>
+              <p class="text-xs text-gray-400 font-light">Months of immersive digital corporate engagement.</p>
+            </div>
+
+            <!-- Stat Card 3 -->
+            <div class="glow-card p-4 sm:p-6 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 400ms;">
+              <span class="text-xs uppercase tracking-widest text-gray-500 font-space font-medium">Priority</span>
+              <div class="my-4 text-[10px] sm:text-xs font-semibold tracking-wider font-space text-white bg-gradient-to-r from-primary-glow/20 to-accent-glow/20 px-2.5 py-1.5 rounded-lg border border-primary-glow/30">
+                SOCIAL GROWTH
+              </div>
+              <p class="text-xs text-gray-400 font-light">Dedicated strategy formulation optimized for network algorithms.</p>
+            </div>
+
+            <!-- Stat Card 4 -->
+            <div class="glow-card p-4 sm:p-6 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 500ms;">
+              <span class="text-xs uppercase tracking-widest text-gray-500 font-space font-medium">Visuals</span>
+              <div class="my-4 text-[10px] sm:text-xs font-semibold tracking-wider font-space text-white bg-gradient-to-r from-secondary-glow/20 to-accent-glow/20 px-2.5 py-1.5 rounded-lg border border-secondary-glow/30">
+                CREATIVE BRAND
+              </div>
+              <p class="text-xs text-gray-400 font-light">Aesthetic development focused on modern graphic principles.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-20 md:py-32 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+          <span class="text-xs font-bold tracking-[0.4em] text-secondary-glow uppercase block mb-2 font-space">CAPABILITIES MATRICES</span>
+          <h2 class="text-3xl sm:text-5xl font-bold font-space uppercase text-white">SKILLSETS & COMPETENCIES</h2>
+          <div class="w-16 h-[2px] bg-gradient-to-r from-secondary-glow to-accent-glow mx-auto mt-4"></div>
+        </div>
+
+        <!-- 11 Skill Cards Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+          
+          <!-- Skill 1 -->
+          <div class="glow-card p-4 sm:p-6 md:p-8 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 50ms;">
+            <div class="w-10 h-10 rounded-xl bg-primary-glow/10 border border-primary-glow/20 flex items-center justify-center text-primary-glow text-base mb-6">
+              <i class="fa-solid fa-share-nodes"></i>
+            </div>
+            <div>
+              <h3 class="text-sm sm:text-base md:text-lg font-bold font-space text-white mb-2">Social Media Marketing</h3>
+              <p class="text-[10px] sm:text-xs text-gray-400 font-light leading-relaxed">Optimization & management across dynamic social pipelines.</p>
+            </div>
+          </div>
+
+          <!-- Skill 2 -->
+          <div class="glow-card p-4 sm:p-6 md:p-8 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 100ms;">
+            <div class="w-10 h-10 rounded-xl bg-secondary-glow/10 border border-secondary-glow/20 flex items-center justify-center text-secondary-glow text-base mb-6">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div>
+              <h3 class="text-sm sm:text-base md:text-lg font-bold font-space text-white mb-2">Canva Designing</h3>
+              <p class="text-[10px] sm:text-xs text-gray-400 font-light leading-relaxed">Producing visual content layout structures with modern balance.</p>
+            </div>
+          </div>
+
+          <!-- Skill 3 -->
+          <div class="glow-card p-4 sm:p-6 md:p-8 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 150ms;">
+            <div class="w-10 h-10 rounded-xl bg-accent-glow/10 border border-accent-glow/20 flex items-center justify-center text-accent-glow text-base mb-6">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
+            </div>
+            <div>
+              <h3 class="text-sm sm:text-base md:text-lg font-bold font-space text-white mb-2">SEO Basics</h3>
+              <p class="text-[10px] sm:text-xs text-gray-400 font-light leading-relaxed">On-page keyword mapping & structure audits for indexing.</p>
+            </div>
+          </div>
+
+          <!-- Skill 4 -->
+          <div class="glow-card p-4 sm:p-6 md:p-8 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 200ms;">
+            <div class="w-10 h-10 rounded-xl bg-primary-glow/10 border border-primary-glow/20 flex items-center justify-center text-primary-glow text-base mb-6">
+              <i class="fa-solid fa-pen-nib"></i>
+            </div>
+            <div>
+              <h3 class="text-sm sm:text-base md:text-lg font-bold font-space text-white mb-2">Content Writing</h3>
+              <p class="text-[10px] sm:text-xs text-gray-400 font-light leading-relaxed">Writing clear captions, micro-copy, and structural articles.</p>
+            </div>
+          </div>
+
+          <!-- Skill 5 -->
+          <div class="glow-card p-4 sm:p-6 md:p-8 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 250ms;">
+            <div class="w-10 h-10 rounded-xl bg-secondary-glow/10 border border-secondary-glow/20 flex items-center justify-center text-secondary-glow text-base mb-6">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div>
+              <h3 class="text-sm sm:text-base md:text-lg font-bold font-space text-white mb-2">Instagram Marketing</h3>
+              <p class="text-[10px] sm:text-xs text-gray-400 font-light leading-relaxed">Reel hooks, post formats, stories scheduling, & hashtags.</p>
+            </div>
+          </div>
+
+          <!-- Skill 6 -->
+          <div class="glow-card p-4 sm:p-6 md:p-8 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 300ms;">
+            <div class="w-10 h-10 rounded-xl bg-accent-glow/10 border border-accent-glow/20 flex items-center justify-center text-accent-glow text-base mb-6">
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div>
+              <h3 class="text-sm sm:text-base md:text-lg font-bold font-space text-white mb-2">Facebook Marketing</h3>
+              <p class="text-[10px] sm:text-xs text-gray-400 font-light leading-relaxed">Page growth, community management, & campaign mechanics.</p>
+            </div>
+          </div>
+
+          <!-- Skill 7 -->
+          <div class="glow-card p-4 sm:p-6 md:p-8 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 350ms;">
+            <div class="w-10 h-10 rounded-xl bg-primary-glow/10 border border-primary-glow/20 flex items-center justify-center text-primary-glow text-base mb-6">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div>
+              <h3 class="text-sm sm:text-base md:text-lg font-bold font-space text-white mb-2">YouTube Marketing</h3>
+              <p class="text-[10px] sm:text-xs text-gray-400 font-light leading-relaxed">Optimization of channel content, tag sets, & custom thumbnails.</p>
+            </div>
+          </div>
+
+          <!-- Skill 8 -->
+          <div class="glow-card p-4 sm:p-6 md:p-8 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 400ms;">
+            <div class="w-10 h-10 rounded-xl bg-secondary-glow/10 border border-secondary-glow/20 flex items-center justify-center text-secondary-glow text-base mb-6">
+              <i class="fa-solid fa-rectangle-ad"></i>
+            </div>
+            <div>
+              <h3 class="text-sm sm:text-base md:text-lg font-bold font-space text-white mb-2">Branding & Promotion</h3>
+              <p class="text-[10px] sm:text-xs text-gray-400 font-light leading-relaxed">Visual guideline setup & promotional alignment campaigns.</p>
+            </div>
+          </div>
+
+          <!-- Skill 9 -->
+          <div class="glow-card p-4 sm:p-6 md:p-8 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 450ms;">
+            <div class="w-10 h-10 rounded-xl bg-accent-glow/10 border border-accent-glow/20 flex items-center justify-center text-accent-glow text-base mb-6">
+              <i class="fa-solid fa-magnifying-glass-dollar"></i>
+            </div>
+            <div>
+              <h3 class="text-sm sm:text-base md:text-lg font-bold font-space text-white mb-2">Google Ads Basics</h3>
+              <p class="text-[10px] sm:text-xs text-gray-400 font-light leading-relaxed">Basic search network ad mechanics & quality score logic.</p>
+            </div>
+          </div>
+
+          <!-- Skill 10 -->
+          <div class="glow-card p-4 sm:p-6 md:p-8 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 500ms;">
+            <div class="w-10 h-10 rounded-xl bg-primary-glow/10 border border-primary-glow/20 flex items-center justify-center text-primary-glow text-base mb-6">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <div>
+              <h3 class="text-sm sm:text-base md:text-lg font-bold font-space text-white mb-2">Communication Skills</h3>
+              <p class="text-[10px] sm:text-xs text-gray-400 font-light leading-relaxed">Expressing messaging structures cleanly across teams & clients.</p>
+            </div>
+          </div>
+
+          <!-- Skill 11 -->
+          <div class="glow-card p-4 sm:p-6 md:p-8 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 550ms;">
+            <div class="w-10 h-10 rounded-xl bg-secondary-glow/10 border border-secondary-glow/20 flex items-center justify-center text-secondary-glow text-base mb-6">
+              <i class="fa-solid fa-hourglass-half"></i>
+            </div>
+            <div>
+              <h3 class="text-sm sm:text-base md:text-lg font-bold font-space text-white mb-2">Time Management</h3>
+              <p class="text-[10px] sm:text-xs text-gray-400 font-light leading-relaxed">Setting strict timelines, prioritizing deliverables, & scheduling.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TOOLS SECTION (Progress Bars) -->
+    <section id="tools" class="py-20 md:py-32 relative overflow-hidden bg-black/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+          <span class="text-xs font-bold tracking-[0.4em] text-accent-glow uppercase block mb-2 font-space">UTILITY INVENTORY</span>
+          <h2 class="text-3xl sm:text-5xl font-bold font-space uppercase text-white">SYSTEM TOOLS ARCHITECTURE</h2>
+          <div class="w-16 h-[2px] bg-gradient-to-r from-accent-glow to-primary-glow mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Tool 1: Canva -->
+          <div class="glow-card p-8 reveal-element" style="transition-delay: 100ms;">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-primary-glow/10 border border-primary-glow/20 flex items-center justify-center text-primary-glow">
+                  <i class="fa-solid fa-palette text-sm"></i>
+                </div>
+                <span class="font-space font-bold text-white text-base">Canva</span>
+              </div>
+              <span class="text-sm font-bold font-orbitron text-primary-glow">95%</span>
+            </div>
+            <!-- Progress Track -->
+            <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-primary-glow to-secondary-glow rounded-full progress-glow opacity-90 transition-all duration-1000 ease-out" style="width: 0%;" data-progress="95%"></div>
+            </div>
+            <p class="text-xs text-gray-500 font-light mt-3 leading-relaxed">Experienced in custom templates, brand kit adherence, multi-page social layouts, and high-conversion post aesthetics.</p>
+          </div>
+
+          <!-- Tool 2: MS Word -->
+          <div class="glow-card p-8 reveal-element" style="transition-delay: 200ms;">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-secondary-glow/10 border border-secondary-glow/20 flex items-center justify-center text-secondary-glow">
+                  <i class="fa-regular fa-file-word text-sm"></i>
+                </div>
+                <span class="font-space font-bold text-white text-base">MS Word</span>
+              </div>
+              <span class="text-sm font-bold font-orbitron text-secondary-glow">90%</span>
+            </div>
+            <!-- Progress Track -->
+            <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-secondary-glow to-accent-glow rounded-full progress-glow opacity-90 transition-all duration-1000 ease-out" style="width: 0%;" data-progress="90%"></div>
+            </div>
+            <p class="text-xs text-gray-500 font-light mt-3 leading-relaxed">Advanced document layout structure, proposal drafts, content outlines, table layouts, and manual copy formatting.</p>
+          </div>
+
+          <!-- Tool 3: Internet Research -->
+          <div class="glow-card p-8 reveal-element" style="transition-delay: 300ms;">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-accent-glow/10 border border-accent-glow/20 flex items-center justify-center text-accent-glow">
+                  <i class="fa-solid fa-globe text-sm"></i>
+                </div>
+                <span class="font-space font-bold text-white text-base">Internet Research</span>
+              </div>
+              <span class="text-sm font-bold font-orbitron text-accent-glow">92%</span>
+            </div>
+            <!-- Progress Track -->
+            <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-accent-glow to-primary-glow rounded-full progress-glow opacity-90 transition-all duration-1000 ease-out" style="width: 0%;" data-progress="92%"></div>
+            </div>
+            <p class="text-xs text-gray-500 font-light mt-3 leading-relaxed">Data mining, competitor analysis audits, trend scanning, keywords research, source checking, and content structure analysis.</p>
+          </div>
+
+          <!-- Tool 4: Online Marketing Tools -->
+          <div class="glow-card p-8 reveal-element" style="transition-delay: 400ms;">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-primary-glow/10 border border-primary-glow/20 flex items-center justify-center text-primary-glow">
+                  <i class="fa-solid fa-chart-simple text-sm"></i>
+                </div>
+                <span class="font-space font-bold text-white text-base">Online Marketing Tools</span>
+              </div>
+              <span class="text-sm font-bold font-orbitron text-primary-glow">88%</span>
+            </div>
+            <!-- Progress Track -->
+            <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-primary-glow to-accent-glow rounded-full progress-glow opacity-90 transition-all duration-1000 ease-out" style="width: 0%;" data-progress="88%"></div>
+            </div>
+            <p class="text-xs text-gray-500 font-light mt-3 leading-relaxed">Familiarity with Meta Business Suite, basic Google Analytics tracking setups, scheduling services, and SEO auditing platforms.</p>
+          </div>
+
+          <!-- Tool 5: Basic Computer Knowledge -->
+          <div class="glow-card p-8 reveal-element" style="transition-delay: 500ms;">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-secondary-glow/10 border border-secondary-glow/20 flex items-center justify-center text-secondary-glow">
+                  <i class="fa-solid fa-desktop text-sm"></i>
+                </div>
+                <span class="font-space font-bold text-white text-base">Basic Computer Knowledge</span>
+              </div>
+              <span class="text-sm font-bold font-orbitron text-secondary-glow">90%</span>
+            </div>
+            <!-- Progress Track -->
+            <div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-secondary-glow to-primary-glow rounded-full progress-glow opacity-90 transition-all duration-1000 ease-out" style="width: 0%;" data-progress="90%"></div>
+            </div>
+            <p class="text-xs text-gray-500 font-light mt-3 leading-relaxed">OS operation, file directory systems, spreadsheet entry templates, cloud navigation, and cybersecurity basic rules.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- EXPERIENCE SECTION (Timeline) -->
+    <section id="experience" class="py-20 md:py-32 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-20 reveal-element">
+          <span class="text-xs font-bold tracking-[0.4em] text-primary-glow uppercase block mb-2 font-space">TIMELINE SEQUENCE</span>
+          <h2 class="text-3xl sm:text-5xl font-bold font-space uppercase text-white">PROFESSIONAL JOURNEY</h2>
+          <div class="w-16 h-[2px] bg-gradient-to-r from-primary-glow to-secondary-glow mx-auto mt-4"></div>
+        </div>
+
+        <!-- Timeline container -->
+        <div class="relative max-w-4xl mx-auto">
+          
+          <!-- Glowing Vertical Line -->
+          <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary-glow via-secondary-glow to-accent-glow opacity-30 transform -translate-x-[1px]"></div>
+          
+          <!-- Timeline Entry 1 (Left Side or Alternating) -->
+          <div class="relative flex flex-col md:flex-row items-stretch mb-16 reveal-element">
+            <!-- Timeline Node Indicator -->
+            <div class="absolute left-4 md:left-1/2 w-8 h-8 rounded-full bg-[#030303] border-4 border-primary-glow transform -translate-x-1/2 flex items-center justify-center z-20 shadow-[0_0_10px_rgba(var(--glow-rgb-primary),0.8)]">
+              <i class="fa-solid fa-briefcase text-[10px] text-primary-glow"></i>
+            </div>
+            
+            <!-- Spacer / Card Left (For Desktop layout alignment) -->
+            <div class="w-full md:w-1/2 pl-12 md:pl-0 md:pr-12 text-left md:text-right flex flex-col justify-center">
+              <div class="glow-card p-6 md:p-8 hover:scale-[1.02] transition-transform duration-300">
+                <div class="flex items-center md:justify-end space-x-2 text-primary-glow mb-2 font-space text-xs tracking-wider font-semibold">
+                  <span class="bg-primary-glow/10 border border-primary-glow/30 px-3 py-1 rounded-full uppercase">3 Months Duration</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold font-space text-white">Digital Marketing Executive</h3>
+                <span class="text-sm font-semibold tracking-wider font-orbitron text-gray-400 uppercase mt-1 block">Full-time Corporate Experience</span>
+                
+                <ul class="mt-6 space-y-3 text-xs md:text-sm text-gray-400 font-light text-left md:text-right">
+                  <li class="flex items-start md:justify-end gap-2.5">
+                    <span class="md:order-2 text-primary-glow"><i class="fa-solid fa-circle-check text-xs mt-1"></i></span>
+                    <span class="md:order-1">Managed visual social media content creation and systematic queue scheduling.</span>
+                  </li>
+                  <li class="flex items-start md:justify-end gap-2.5">
+                    <span class="md:order-2 text-primary-glow"><i class="fa-solid fa-circle-check text-xs mt-1"></i></span>
+                    <span class="md:order-1">Developed customized Canva promotional templates reflecting corporate guidelines.</span>
+                  </li>
+                  <li class="flex items-start md:justify-end gap-2.5">
+                    <span class="md:order-2 text-primary-glow"><i class="fa-solid fa-circle-check text-xs mt-1"></i></span>
+                    <span class="md:order-1">Collaborated on strategic branding and targeted audience engagement campaigns.</span>
+                  </li>
+                  <li class="flex items-start md:justify-end gap-2.5">
+                    <span class="md:order-2 text-primary-glow"><i class="fa-solid fa-circle-check text-xs mt-1"></i></span>
+                    <span class="md:order-1">Applied basic search engine optimization setups on articles and profiles.</span>
+                  </li>
+                  <li class="flex items-start md:justify-end gap-2.5">
+                    <span class="md:order-2 text-primary-glow"><i class="fa-solid fa-circle-check text-xs mt-1"></i></span>
+                    <span class="md:order-1">Maintained organic brand channels on Instagram and Facebook.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="hidden md:block w-1/2"></div>
+          </div>
+
+          <!-- Timeline Entry 2 (Right Side or Alternating) -->
+          <div class="relative flex flex-col md:flex-row items-stretch mb-8 reveal-element">
+            <!-- Timeline Node Indicator -->
+            <div class="absolute left-4 md:left-1/2 w-8 h-8 rounded-full bg-[#030303] border-4 border-secondary-glow transform -translate-x-1/2 flex items-center justify-center z-20 shadow-[0_0_10px_rgba(var(--glow-rgb-secondary),0.8)]">
+              <i class="fa-solid fa-laptop-code text-[10px] text-secondary-glow"></i>
+            </div>
+            
+            <!-- Spacer Left -->
+            <div class="hidden md:block w-1/2"></div>
+            
+            <!-- Card Right -->
+            <div class="w-full md:w-1/2 pl-12 md:pl-12 text-left flex flex-col justify-center">
+              <div class="glow-card p-6 md:p-8 hover:scale-[1.02] transition-transform duration-300">
+                <div class="flex items-center space-x-2 text-secondary-glow mb-2 font-space text-xs tracking-wider font-semibold">
+                  <span class="bg-secondary-glow/10 border border-secondary-glow/30 px-3 py-1 rounded-full uppercase">2 Months Duration</span>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold font-space text-white">Freelance Digital Marketing</h3>
+                <span class="text-sm font-semibold tracking-wider font-orbitron text-gray-400 uppercase mt-1 block">Independent Solutions</span>
+                
+                <ul class="mt-6 space-y-3 text-xs md:text-sm text-gray-400 font-light text-left">
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-secondary-glow"><i class="fa-solid fa-circle-check text-xs mt-1"></i></span>
+                    <span>Designed high-fidelity social media graphics customized for target niches.</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-secondary-glow"><i class="fa-solid fa-circle-check text-xs mt-1"></i></span>
+                    <span>Established branding strategies, identity schemes, and custom layouts for micro-businesses.</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-secondary-glow"><i class="fa-solid fa-circle-check text-xs mt-1"></i></span>
+                    <span>Managed client accounts, communication, project scoping, and expectations mapping.</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <span class="text-secondary-glow"><i class="fa-solid fa-circle-check text-xs mt-1"></i></span>
+                    <span>Generated content calendars, promotional plans, and engagement schedule boards.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-20 md:py-32 relative overflow-hidden bg-black/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+          <span class="text-xs font-bold tracking-[0.4em] text-secondary-glow uppercase block mb-2 font-space">CREATIVE DELIVERABLES</span>
+          <h2 class="text-3xl sm:text-5xl font-bold font-space uppercase text-white">MARKETING CASE PRACTICES</h2>
+          <div class="w-16 h-[2px] bg-gradient-to-r from-secondary-glow to-accent-glow mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          
+          <!-- Project 1 -->
+          <div class="glow-card group flex flex-col justify-between overflow-hidden reveal-element tilt-card" style="transition-delay: 100ms;">
+            <div class="relative overflow-hidden aspect-video bg-[#111]">
+              <!-- Mockup Graphic background representing Blog Creation -->
+              <div class="absolute inset-0 bg-gradient-to-tr from-primary-glow/20 to-accent-glow/20 mix-blend-overlay"></div>
+              <div class="absolute inset-0 flex flex-col justify-center items-center p-6 text-center space-y-4">
+                <i class="fa-solid fa-blog text-5xl text-primary-glow/80 group-hover:scale-110 transition-transform duration-500"></i>
+                <div class="w-full max-w-xs p-3 rounded-lg bg-black/60 border border-white/10 text-left font-space text-[10px] space-y-2">
+                  <div class="h-2 w-2/3 bg-primary-glow/40 rounded"></div>
+                  <div class="h-2 w-full bg-white/20 rounded"></div>
+                  <div class="h-2 w-5/6 bg-white/25 rounded"></div>
+                </div>
+              </div>
+              <div class="absolute bottom-4 left-4 flex space-x-2">
+                <span class="text-[10px] font-bold tracking-widest font-space text-white bg-black/70 px-3 py-1 rounded-full border border-white/10 uppercase">SEO Optimization</span>
+                <span class="text-[10px] font-bold tracking-widest font-space text-white bg-black/70 px-3 py-1 rounded-full border border-white/10 uppercase">Blog Tech</span>
+              </div>
+            </div>
+            
+            <div class="p-8 space-y-4">
+              <h3 class="text-2xl font-bold font-space text-white group-hover:text-primary-glow transition-colors duration-300">Blog Creation Project</h3>
+              <p class="text-sm text-gray-400 font-light leading-relaxed">
+                A personal brand optimization and publication practice. Designed, drafted, and optimized content pathways using standard search-engine directives.
+              </p>
+              
+              <ul class="space-y-2 text-xs text-gray-500 font-light">
+                <li class="flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary-glow"></span>
+                  <span>Formulated full blog architecture and content maps.</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary-glow"></span>
+                  <span>Applied keyword insertion guidelines and meta parameters.</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary-glow"></span>
+                  <span>Improved overall navigation flow and readability formats.</span>
+                </li>
+              </ul>
+
+              <!-- Project CTA -->
+              <div class="pt-4">
+                <button class="relative group/btn overflow-hidden rounded-full p-[1px] focus:outline-none w-full" onclick="showDemoAlert('Blog Creation')">
+                  <span class="absolute inset-0 bg-gradient-to-r from-primary-glow to-secondary-glow rounded-full"></span>
+                  <div class="px-6 py-3 rounded-full bg-[#070707] text-xs font-bold tracking-widest font-space text-white transition-all duration-300 group-hover/btn:bg-transparent text-center">
+                    VERIFY METRICS <i class="fa-solid fa-arrow-right-long ml-2"></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="glow-card group flex flex-col justify-between overflow-hidden reveal-element tilt-card" style="transition-delay: 200ms;">
+            <div class="relative overflow-hidden aspect-video bg-[#111]">
+              <!-- Mockup Graphic background representing Social Media Design -->
+              <div class="absolute inset-0 bg-gradient-to-tr from-accent-glow/20 to-secondary-glow/20 mix-blend-overlay"></div>
+              <div class="absolute inset-0 flex flex-col justify-center items-center p-6 text-center space-y-4">
+                <i class="fa-solid fa-compass-drafting text-5xl text-secondary-glow/80 group-hover:scale-110 transition-transform duration-500"></i>
+                <div class="flex space-x-2 justify-center w-full max-w-xs">
+                  <div class="w-10 h-10 rounded-lg bg-primary-glow/20 border border-primary-glow/30 flex items-center justify-center text-[10px] text-white">IG</div>
+                  <div class="w-10 h-10 rounded-lg bg-secondary-glow/20 border border-secondary-glow/30 flex items-center justify-center text-[10px] text-white">FB</div>
+                  <div class="w-10 h-10 rounded-lg bg-accent-glow/20 border border-accent-glow/30 flex items-center justify-center text-[10px] text-white">YT</div>
+                </div>
+              </div>
+              <div class="absolute bottom-4 left-4 flex space-x-2">
+                <span class="text-[10px] font-bold tracking-widest font-space text-white bg-black/70 px-3 py-1 rounded-full border border-white/10 uppercase">Canva Graphics</span>
+                <span class="text-[10px] font-bold tracking-widest font-space text-white bg-black/70 px-3 py-1 rounded-full border border-white/10 uppercase">Branding</span>
+              </div>
+            </div>
+            
+            <div class="p-8 space-y-4">
+              <h3 class="text-2xl font-bold font-space text-white group-hover:text-secondary-glow transition-colors duration-300">Social Media Design Practice</h3>
+              <p class="text-sm text-gray-400 font-light leading-relaxed">
+                Development of thematic layout assets, vector shapes, templates, and high-impact social structures to raise brand audience conversion rates.
+              </p>
+              
+              <ul class="space-y-2 text-xs text-gray-500 font-light">
+                <li class="flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary-glow"></span>
+                  <span>Constructed corporate color guides and assets patterns.</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary-glow"></span>
+                  <span>Built templates for stories, highlights, and grids.</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary-glow"></span>
+                  <span>Researched high-performing post layouts for audience retention.</span>
+                </li>
+              </ul>
+
+              <!-- Project CTA -->
+              <div class="pt-4">
+                <button class="relative group/btn overflow-hidden rounded-full p-[1px] focus:outline-none w-full" onclick="showDemoAlert('Social Media Design')">
+                  <span class="absolute inset-0 bg-gradient-to-r from-secondary-glow to-primary-glow rounded-full"></span>
+                  <div class="px-6 py-3 rounded-full bg-[#070707] text-xs font-bold tracking-widest font-space text-white transition-all duration-300 group-hover/btn:bg-transparent text-center">
+                    VERIFY METRICS <i class="fa-solid fa-arrow-right-long ml-2"></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- INTERACTIVE SECTION (Social Growth Estimator Dashboard) -->
+    <section id="estimator" class="py-20 md:py-32 relative overflow-hidden bg-black/40 border-y border-white/5">
+      
+      <!-- Inside Section Background Blob -->
+      <div class="blob bg-secondary-glow/10 w-[300px] h-[300px] top-[10%] right-[20%]"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+          <span class="text-xs font-bold tracking-[0.4em] text-primary-glow uppercase block mb-2 font-space">SIMULATION SYSTEM</span>
+          <h2 class="text-3xl sm:text-5xl font-bold font-space uppercase text-white">SOCIAL GROWTH ESTIMATOR</h2>
+          <p class="text-xs md:text-sm text-gray-500 font-light mt-3 max-w-xl mx-auto">
+            Interact with this dynamic tool to estimate how active postings and initial follower metrics boost reach using Nikita's target frameworks.
+          </p>
+          <div class="w-16 h-[2px] bg-gradient-to-r from-primary-glow to-secondary-glow mx-auto mt-4"></div>
+        </div>
+
+        <!-- Dashboard Wrapper -->
+        <div class="glow-card max-w-4xl mx-auto p-6 md:p-10">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Controls panel (Left 7 Columns) -->
+            <div class="lg:col-span-7 space-y-8">
+              
+              <!-- 1. Platform Selector -->
+              <div class="space-y-4">
+                <label class="text-xs font-bold tracking-widest font-space text-gray-400 uppercase block">1. Select Pipeline Platform</label>
+                <div class="grid grid-cols-3 gap-3">
+                  
+                  <button onclick="setEstimatorPlatform('instagram', this)" class="platform-btn p-2 sm:p-3 rounded-2xl border border-primary-glow bg-primary-glow/10 text-white font-space text-[10px] sm:text-xs font-semibold tracking-wider flex flex-col items-center justify-center space-y-1 sm:space-y-2 hover:border-primary-glow transition-all duration-300">
+                    <i class="fa-brands fa-instagram text-lg sm:text-xl text-primary-glow"></i>
+                    <span>Instagram</span>
+                  </button>
+
+                  <button onclick="setEstimatorPlatform('facebook', this)" class="platform-btn p-2 sm:p-3 rounded-2xl border border-white/5 bg-white/5 text-gray-400 font-space text-[10px] sm:text-xs font-semibold tracking-wider flex flex-col items-center justify-center space-y-1 sm:space-y-2 hover:border-primary-glow transition-all duration-300">
+                    <i class="fa-brands fa-facebook-f text-lg sm:text-xl text-gray-400"></i>
+                    <span>Facebook</span>
+                  </button>
+
+                  <button onclick="setEstimatorPlatform('youtube', this)" class="platform-btn p-2 sm:p-3 rounded-2xl border border-white/5 bg-white/5 text-gray-400 font-space text-[10px] sm:text-xs font-semibold tracking-wider flex flex-col items-center justify-center space-y-1 sm:space-y-2 hover:border-primary-glow transition-all duration-300">
+                    <i class="fa-brands fa-youtube text-lg sm:text-xl text-gray-400"></i>
+                    <span>YouTube</span>
+                  </button>
+
+                </div>
+              </div>
+
+              <!-- 2. Followers Slider -->
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <label class="text-xs font-bold tracking-widest font-space text-gray-400 uppercase">2. Current Follower Core</label>
+                  <span class="text-sm font-bold font-orbitron text-primary-glow bg-primary-glow/10 px-3 py-1 rounded-lg border border-primary-glow/30" id="follower-display">10,000</span>
+                </div>
+                <input type="range" id="follower-range" min="1000" max="500000" step="1000" value="10000" oninput="updateEstimator()">
+                <div class="flex items-center justify-between text-[10px] text-gray-500 font-medium">
+                  <span>1K FOLLOWERS</span>
+                  <span>500K FOLLOWERS</span>
+                </div>
+              </div>
+
+              <!-- 3. Posts per week Slider -->
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <label class="text-xs font-bold tracking-widest font-space text-gray-400 uppercase">3. Content Load (Posts / Week)</label>
+                  <span class="text-sm font-bold font-orbitron text-secondary-glow bg-secondary-glow/10 px-3 py-1 rounded-lg border border-secondary-glow/30" id="posts-display">4</span>
+                </div>
+                <input type="range" id="posts-range" min="1" max="21" step="1" value="4" oninput="updateEstimator()">
+                <div class="flex items-center justify-between text-[10px] text-gray-500 font-medium">
+                  <span>1 POST / WK</span>
+                  <span>21 POSTS / WK</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Results Panel (Right 5 Columns) -->
+            <div class="lg:col-span-5 p-6 rounded-3xl bg-white/5 border border-white/10 flex flex-col justify-between space-y-6 relative overflow-hidden">
+              
+              <!-- Background mesh effect -->
+              <div class="absolute inset-0 bg-gradient-to-tr from-primary-glow/10 to-secondary-glow/5 pointer-events-none"></div>
+              
+              <div class="relative z-10 space-y-6">
+                <div class="flex items-center justify-between pb-3 border-b border-white/10">
+                  <span class="text-xs font-bold tracking-widest font-space text-gray-300 uppercase">ESTIMATED METRICS</span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                </div>
+
+                <!-- Result 1 -->
+                <div class="space-y-1">
+                  <span class="text-[10px] font-bold tracking-widest font-space text-gray-400 uppercase">Monthly System Reach</span>
+                  <div class="text-2xl sm:text-3xl font-black font-space text-white" id="result-reach">0</div>
+                  <!-- Progress meter visualization -->
+                  <div class="w-full h-1 bg-white/5 rounded-full overflow-hidden">
+                    <div id="reach-bar" class="h-full bg-primary-glow rounded-full transition-all duration-300" style="width: 25%;"></div>
+                  </div>
+                </div>
+
+                <!-- Result 2 -->
+                <div class="space-y-1">
+                  <span class="text-[10px] font-bold tracking-widest font-space text-gray-400 uppercase">Engagement Factor Boost</span>
+                  <div class="text-2xl sm:text-3xl font-black font-space text-white" id="result-engagement">0</div>
+                  <div class="w-full h-1 bg-white/5 rounded-full overflow-hidden">
+                    <div id="engagement-bar" class="h-full bg-secondary-glow rounded-full transition-all duration-300" style="width: 15%;"></div>
+                  </div>
+                </div>
+
+                <!-- Result 3 -->
+                <div class="space-y-1">
+                  <span class="text-[10px] font-bold tracking-widest font-space text-gray-400 uppercase">Audience Acquisition Goal</span>
+                  <div class="text-2xl sm:text-3xl font-black font-space text-white" id="result-growth">0</div>
+                  <div class="w-full h-1 bg-white/5 rounded-full overflow-hidden">
+                    <div id="growth-bar" class="h-full bg-accent-glow rounded-full transition-all duration-300" style="width: 20%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action prompt inside Estimator -->
+              <div class="relative z-10 pt-4 border-t border-white/10">
+                <a href="#contact" class="block w-full py-3 rounded-full bg-gradient-to-r from-primary-glow to-secondary-glow text-center text-xs font-bold tracking-widest font-space text-white hover:shadow-[0_0_15px_rgba(var(--glow-rgb-primary),0.4)] transition-all duration-300">
+                  DEPLOY WITH NIKITA
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="py-20 md:py-32 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+          <span class="text-xs font-bold tracking-[0.4em] text-primary-glow uppercase block mb-2 font-space">ACADEMIC FOUNDATION</span>
+          <h2 class="text-3xl sm:text-5xl font-bold font-space uppercase text-white">EDUCATION BACKGROUND</h2>
+          <div class="w-16 h-[2px] bg-gradient-to-r from-primary-glow to-secondary-glow mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          
+          <!-- Education Card 1 -->
+          <div class="glow-card p-8 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 100ms;">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-primary-glow/10 border border-primary-glow/20 flex items-center justify-center text-primary-glow mb-6">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h3 class="text-lg md:text-xl font-bold font-space text-white leading-tight">Bachelor of Arts</h3>
+              <p class="text-xs text-primary-glow mt-1 font-orbitron">Political Science Hons.</p>
+              <p class="text-xs text-gray-500 font-light mt-3">Indira Gandhi National Open University (IGNOU)</p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-white/5 w-full flex items-center justify-between text-xs text-gray-400">
+              <span class="font-space">2022–2025</span>
+              <span class="text-[9px] uppercase tracking-wider font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/30">Enrolled</span>
+            </div>
+          </div>
+
+          <!-- Education Card 2 -->
+          <div class="glow-card p-8 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 200ms;">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-secondary-glow/10 border border-secondary-glow/20 flex items-center justify-center text-secondary-glow mb-6">
+                <i class="fa-solid fa-school"></i>
+              </div>
+              <h3 class="text-lg md:text-xl font-bold font-space text-white leading-tight">12th Standard</h3>
+              <p class="text-xs text-secondary-glow mt-1 font-orbitron">CBSE Board</p>
+              <p class="text-xs text-gray-500 font-light mt-3">Modern Senior Secondary School, Bahadurgarh</p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-white/5 w-full flex items-center justify-between text-xs text-gray-400">
+              <span class="font-space">Completed</span>
+              <span class="text-[9px] uppercase tracking-wider font-semibold text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/30">CBSE</span>
+            </div>
+          </div>
+
+          <!-- Education Card 3 -->
+          <div class="glow-card p-8 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 300ms;">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-accent-glow/10 border border-accent-glow/20 flex items-center justify-center text-accent-glow mb-6">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <h3 class="text-lg md:text-xl font-bold font-space text-white leading-tight">Digital Marketing Course</h3>
+              <p class="text-xs text-accent-glow mt-1 font-orbitron">Professional Certification</p>
+              <p class="text-xs text-gray-500 font-light mt-3">Kshamta Centre, Bahadurgarh</p>
+            </div>
+            <div class="mt-8 pt-4 border-t border-white/5 w-full flex items-center justify-between text-xs text-gray-400">
+              <span class="font-space">Vocational</span>
+              <span class="text-[9px] uppercase tracking-wider font-semibold text-primary-glow bg-primary-glow/10 px-2 py-0.5 rounded border border-primary-glow/30">Certified</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- LANGUAGES & HOBBIES COMBO SECTION -->
+    <section class="py-20 md:py-32 relative overflow-hidden bg-black/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          
+          <!-- Left side: Languages (5 Columns) -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="reveal-element">
+              <span class="text-xs font-bold tracking-[0.4em] text-primary-glow uppercase block mb-2 font-space">COMMUNICATION PIPELINE</span>
+              <h2 class="text-2xl sm:text-4xl font-bold font-space uppercase text-white">LANGUAGES PROFILE</h2>
+              <div class="w-12 h-[2px] bg-gradient-to-r from-primary-glow to-secondary-glow mt-3"></div>
+            </div>
+
+            <!-- Language Card 1: English -->
+            <div class="glow-card p-6 reveal-element" style="transition-delay: 100ms;">
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-space font-bold text-white text-base">English</span>
+                <span class="text-xs text-primary-glow font-orbitron font-semibold uppercase tracking-widest">Fluent</span>
+              </div>
+              <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-primary-glow to-secondary-glow rounded-full" style="width: 85%;"></div>
+              </div>
+              <span class="text-[10px] text-gray-500 font-light mt-2 block">Professional fluency - suitable for clients documentation & reporting.</span>
+            </div>
+
+            <!-- Language Card 2: Hindi -->
+            <div class="glow-card p-6 reveal-element" style="transition-delay: 200ms;">
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-space font-bold text-white text-base">Hindi</span>
+                <span class="text-xs text-secondary-glow font-orbitron font-semibold uppercase tracking-widest">Native/Bilingual</span>
+              </div>
+              <div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-secondary-glow to-accent-glow rounded-full" style="width: 100%;"></div>
+              </div>
+              <span class="text-[10px] text-gray-500 font-light mt-2 block">Native speaker - advanced oral, script content creation and review.</span>
+            </div>
+          </div>
+
+          <!-- Right side: Hobbies (7 Columns) -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="reveal-element">
+              <span class="text-xs font-bold tracking-[0.4em] text-secondary-glow uppercase block mb-2 font-space">CREATIVE OUTLETS</span>
+              <h2 class="text-2xl sm:text-4xl font-bold font-space uppercase text-white">INTERESTS & HOBBIES</h2>
+              <div class="w-12 h-[2px] bg-gradient-to-r from-secondary-glow to-accent-glow mt-3"></div>
+            </div>
+
+            <!-- Grid of 4 Hobby Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+              <!-- Hobby Card 1 -->
+              <div class="glow-card p-6 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 100ms;">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary-glow to-secondary-glow flex items-center justify-center text-white mb-6">
+                  <i class="fa-solid fa-photo-film"></i>
+                </div>
+                <div>
+                  <h3 class="text-base font-bold font-space text-white mb-1">Content Creation</h3>
+                  <p class="text-xs text-gray-400 font-light leading-relaxed">Assembling visual reels & post media.</p>
+                </div>
+              </div>
+
+              <!-- Hobby Card 2 -->
+              <div class="glow-card p-6 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 200ms;">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-secondary-glow to-primary-glow flex items-center justify-center text-white mb-6">
+                  <i class="fa-solid fa-feather-pointed"></i>
+                </div>
+                <div>
+                  <h3 class="text-base font-bold font-space text-white mb-1">Blogging</h3>
+                  <p class="text-xs text-gray-400 font-light leading-relaxed">Structuring articles on emerging trends.</p>
+                </div>
+              </div>
+
+              <!-- Hobby Card 3 -->
+              <div class="glow-card p-6 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 300ms;">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-accent-glow to-primary-glow flex items-center justify-center text-white mb-6">
+                  <i class="fa-solid fa-pen-fancy"></i>
+                </div>
+                <div>
+                  <h3 class="text-base font-bold font-space text-white mb-1">Writing</h3>
+                  <p class="text-xs text-gray-400 font-light leading-relaxed">Drafting thoughts, stories & micro-copy.</p>
+                </div>
+              </div>
+
+              <!-- Hobby Card 4 -->
+              <div class="glow-card p-6 flex flex-col justify-between items-start reveal-element tilt-card" style="transition-delay: 400ms;">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary-glow to-accent-glow flex items-center justify-center text-white mb-6">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <h3 class="text-base font-bold font-space text-white mb-1">Learning Marketing Skills</h3>
+                  <p class="text-xs text-gray-400 font-light leading-relaxed">Analyzing search shifts & ad mechanisms.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 md:py-32 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+          <span class="text-xs font-bold tracking-[0.4em] text-primary-glow uppercase block mb-2 font-space">SECURE CONNECTION</span>
+          <h2 class="text-3xl sm:text-5xl font-bold font-space uppercase text-white">GET IN TOUCH</h2>
+          <div class="w-16 h-[2px] bg-gradient-to-r from-primary-glow to-secondary-glow mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch max-w-5xl mx-auto">
+          
+          <!-- Contact Details (Left 5 Columns) -->
+          <div class="lg:col-span-5 glow-card p-8 flex flex-col justify-between reveal-element" style="transition-delay: 100ms;">
+            
+            <div class="space-y-8">
+              <h3 class="text-2xl font-bold font-space text-white">Direct Channels</h3>
+              <p class="text-xs text-gray-400 leading-relaxed font-light">
+                Feel free to contact me directly using the verified links below. I monitor all communications daily.
+              </p>
+
+              <!-- Address Details -->
+              <div class="space-y-4">
+                
+                <!-- Email -->
+                <div class="flex items-center space-x-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-primary-glow/10 border border-primary-glow/30 flex items-center justify-center text-primary-glow text-sm">
+                    <i class="fa-regular fa-envelope"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-gray-500 font-bold uppercase tracking-widest block">EMAIL ADDRESS</span>
+                    <a href="mailto:drallnikita24@gmail.com" class="text-sm font-space font-semibold text-white hover:text-primary-glow transition-colors">drallnikita24@gmail.com</a>
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="flex items-center space-x-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-secondary-glow/10 border border-secondary-glow/30 flex items-center justify-center text-secondary-glow text-sm">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-gray-500 font-bold uppercase tracking-widest block">TELEPHONE NUMBER</span>
+                    <a href="tel:+917988567596" class="text-sm font-space font-semibold text-white hover:text-secondary-glow transition-colors">+91 7988567596</a>
+                  </div>
+                </div>
+
+                <!-- Location -->
+                <div class="flex items-center space-x-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-accent-glow/10 border border-accent-glow/30 flex items-center justify-center text-accent-glow text-sm">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <span class="text-[10px] text-gray-500 font-bold uppercase tracking-widest block">GEOGRAPHIC NODE</span>
+                    <span class="text-sm font-space font-semibold text-white">Bahadurgarh, Haryana, India</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Social Media Handles -->
+            <div class="pt-8 border-t border-white/5 space-y-4">
+              <span class="text-[10px] text-gray-500 font-bold uppercase tracking-widest block">SECURE SOCIAL PIPELINES</span>
+              <div class="flex items-center space-x-3">
+                <a href="#" aria-label="LinkedIn" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-glow transition-all">
+                  <i class="fa-brands fa-linkedin-in text-sm"></i>
+                </a>
+                <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-glow transition-all">
+                  <i class="fa-brands fa-instagram text-sm"></i>
+                </a>
+                <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary-glow transition-all">
+                  <i class="fa-brands fa-facebook-f text-sm"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Contact Form (Right 7 Columns) -->
+          <div class="lg:col-span-7 glow-card p-8 md:p-10 reveal-element" style="transition-delay: 200ms;">
+            
+            <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Name Input -->
+                <div class="space-y-2">
+                  <label for="form-name" class="text-[10px] font-bold tracking-widest font-space text-gray-400 uppercase">IDENTIFIER (NAME)</label>
+                  <input type="text" id="form-name" required placeholder="John Doe" class="w-full bg-white/5 border border-white/10 focus:border-primary-glow rounded-2xl px-5 py-4 text-sm text-white focus:outline-none transition-colors">
+                </div>
+                <!-- Email Input -->
+                <div class="space-y-2">
+                  <label for="form-email" class="text-[10px] font-bold tracking-widest font-space text-gray-400 uppercase">EMAIL ADDRESS</label>
+                  <input type="email" id="form-email" required placeholder="john@example.com" class="w-full bg-white/5 border border-white/10 focus:border-primary-glow rounded-2xl px-5 py-4 text-sm text-white focus:outline-none transition-colors">
+                </div>
+              </div>
+
+              <!-- Message Input -->
+              <div class="space-y-2">
+                <label for="form-message" class="text-[10px] font-bold tracking-widest font-space text-gray-400 uppercase">TRANSMISSION DATA (MESSAGE)</label>
+                <textarea id="form-message" required rows="5" placeholder="Let's build a stunning campaign..." class="w-full bg-white/5 border border-white/10 focus:border-primary-glow rounded-2xl px-5 py-4 text-sm text-white focus:outline-none transition-colors resize-none"></textarea>
+              </div>
+
+              <!-- Privacy note -->
+              <p class="text-[10px] text-gray-500 leading-relaxed font-light">
+                <i class="fa-solid fa-lock text-primary-glow/80 mr-1.5"></i>
+                Privacy Assurance: Email addresses are never shared. Direct records are processed securely.
+              </p>
+
+              <!-- Submit Button -->
+              <button type="submit" id="form-submit-btn" class="w-full relative group overflow-hidden rounded-full p-[1px] focus:outline-none">
+                <span class="absolute inset-0 bg-gradient-to-r from-primary-glow via-secondary-glow to-accent-glow rounded-full"></span>
+                <div class="px-8 py-4 rounded-full bg-[#050505] text-sm font-bold tracking-widest font-space text-white relative transition-all duration-300 group-hover:bg-transparent text-center">
+                  ESTABLISH CONNECTION <i class="fa-solid fa-paper-plane ml-2 animate-pulse"></i>
+                </div>
+              </button>
+            </form>
+
+            <!-- Success Message Modal Placeholder -->
+            <div id="form-success-container" class="hidden flex flex-col items-center justify-center py-12 text-center space-y-4">
+              <div class="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <h4 class="text-xl font-bold font-space text-white">TRANSMISSION RECEIVED</h4>
+              <p class="text-xs text-gray-400 max-w-sm">Thank you. Your message has successfully navigated Nikita's servers. A response will follow within 24 hours.</p>
+              <button onclick="resetContactForm()" class="px-6 py-2 rounded-full border border-white/15 bg-white/5 hover:border-primary-glow hover:bg-primary-glow/5 text-xs font-bold tracking-widest font-space text-white transition-all">SEND ANOTHER MESSAGE</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-[#020202] border-t border-white/5 pt-16 pb-8 relative overflow-hidden">
+      
+      <!-- Footer line animation container -->
+      <div class="absolute top-0 left-0 right-0 h-[2px] overflow-hidden">
+        <div class="h-full bg-gradient-to-r from-primary-glow via-secondary-glow to-accent-glow animate-pulse" style="animation-duration: 3s;"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-white/5">
+          
+          <!-- Logo & Description (5 Columns) -->
+          <div class="md:col-span-5 space-y-4">
+            <a href="#" class="flex items-center space-x-3 group">
+              <div class="relative w-10 h-10 rounded-full flex items-center justify-center bg-white/5 border border-white/10 group-hover:border-primary-glow transition-all duration-300">
+                <span class="text-xs font-orbitron font-black bg-gradient-to-r from-primary-glow to-secondary-glow bg-clip-text text-transparent">ND</span>
+              </div>
+              <span class="text-base font-bold tracking-widest font-space text-white">NIKITA DRALL</span>
+            </a>
+            <p class="text-xs text-gray-500 max-w-sm leading-relaxed font-light">
+              Designing premium digital content, managing organic audience metrics, and formulating branding strategies with aesthetic precision.
+            </p>
+          </div>
+
+          <!-- Quick Links (3 Columns) -->
+          <div class="md:col-span-3 space-y-4">
+            <span class="text-[10px] text-gray-500 font-bold uppercase tracking-widest block">NAVIGATIONAL LINKS</span>
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <a href="#about" class="text-gray-400 hover:text-white transition-colors py-1">About</a>
+              <a href="#skills" class="text-gray-400 hover:text-white transition-colors py-1">Skills</a>
+              <a href="#experience" class="text-gray-400 hover:text-white transition-colors py-1">Experience</a>
+              <a href="#projects" class="text-gray-400 hover:text-white transition-colors py-1">Projects</a>
+              <a href="#estimator" class="text-gray-400 hover:text-white transition-colors py-1">Estimator</a>
+              <a href="#contact" class="text-gray-400 hover:text-white transition-colors py-1">Contact</a>
+            </div>
+          </div>
+
+          <!-- Contact Short (4 Columns) -->
+          <div class="md:col-span-4 space-y-4">
+            <span class="text-[10px] text-gray-500 font-bold uppercase tracking-widest block">OFFICIAL ENDPOINT</span>
+            <div class="text-xs space-y-2 text-gray-400">
+              <p class="flex items-center space-x-2">
+                <span class="text-primary-glow"><i class="fa-regular fa-envelope"></i></span>
+                <a href="mailto:drallnikita24@gmail.com" class="hover:text-white transition-colors">drallnikita24@gmail.com</a>
+              </p>
+              <p class="flex items-center space-x-2">
+                <span class="text-secondary-glow"><i class="fa-solid fa-phone"></i></span>
+                <a href="tel:+917988567596" class="hover:text-white transition-colors">+91 7988567596</a>
+              </p>
+              <p class="flex items-center space-x-2">
+                <span class="text-accent-glow"><i class="fa-solid fa-location-dot"></i></span>
+                <span>Bahadurgarh, Haryana</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Copyright Block -->
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 space-y-4 sm:space-y-0">
+          <p>© 2026 Nikita Drall. All Rights Reserved.</p>
+          <p class="flex items-center space-x-1.5 font-light">
+            <span>Designed with</span>
+            <span class="text-primary-glow animate-pulse"><i class="fa-solid fa-heart"></i></span>
+            <span>premium minimalist aesthetics.</span>
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Custom Scripts -->
+  <script>
+    /* ---------------------------------------------------- */
+    /* 1. Preloader Progress Management                     */
+    /* ---------------------------------------------------- */
+    const preloaderLogs = [
+      "Initializing core interface...",
+      "Generating neon assets...",
+      "Loading typography metrics...",
+      "Synthesizing client database...",
+      "Establishing secure portal...",
+      "Completing rendering system..."
+    ];
+    
+    let currentLogIndex = 0;
+    let loadingProgress = 0;
+    
+    const preloaderBar = document.getElementById('preloader-bar');
+    const preloaderPercentage = document.getElementById('preloader-percentage');
+    const preloaderStatus = document.getElementById('preloader-status');
+    const preloaderScreen = document.getElementById('preloader');
+
+    const progressInterval = setInterval(() => {
+      // Simulate non-linear futuristic load
+      const increment = Math.floor(Math.random() * 12) + 3;
+      loadingProgress = Math.min(loadingProgress + increment, 100);
+      
+      preloaderBar.style.width = `${loadingProgress}%`;
+      preloaderPercentage.innerText = `${loadingProgress.toString().padStart(2, '0')}%`;
+      
+      // Rotate status text based on progress thresholds
+      const statusIndex = Math.min(
+        Math.floor((loadingProgress / 100) * preloaderLogs.length),
+        preloaderLogs.length - 1
+      );
+      preloaderStatus.innerText = preloaderLogs[statusIndex];
+
+      if (loadingProgress >= 100) {
+        clearInterval(progressInterval);
+        
+        // Let everything settle for a brief instant
+        setTimeout(() => {
+          preloaderScreen.classList.add('opacity-0', 'pointer-events-none');
+          // Start counting animations of stats cards once preloader is gone
+          setTimeout(initStatsCounter, 500);
+        }, 500);
+      }
+    }, 120);
+
+
+    /* ---------------------------------------------------- */
+    /* 2. Interactive Interactive Particles Background    */
+    /* ---------------------------------------------------- */
+    const canvas = document.getElementById('particle-canvas');
+    const ctx = canvas.getContext('2d');
+    
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    let particles = [];
+    const maxParticles = 60;
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.vx = (Math.random() - 0.5) * 0.4;
+        this.vy = (Math.random() - 0.5) * 0.4;
+        this.radius = Math.random() * 1.5 + 0.5;
+        this.opacity = Math.random() * 0.3 + 0.1;
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x < 0 || this.x > width) this.vx *= -1;
+        if (this.y < 0 || this.y > height) this.vy *= -1;
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+        ctx.fill();
+      }
+    }
+
+    function initParticles() {
+      particles = [];
+      for (let i = 0; i < maxParticles; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, width, height);
+      particles.forEach((p) => {
+        p.update();
+        p.draw();
+      });
+      // Draw connection lines
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            const primaryGlow = getComputedStyle(document.documentElement).getPropertyValue('--glow-rgb-primary').trim();
+            ctx.strokeStyle = `rgba(${primaryGlow || '236,72,153'}, ${0.12 * (1 - dist / 120)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+      requestAnimationFrame(animateParticles);
+    }
+
+    initParticles();
+    animateParticles();
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      initParticles();
+    });
+
+
+    /* ---------------------------------------------------- */
+    /* 3. Custom Cursor Implementation                      */
+    /* ---------------------------------------------------- */
+    const cursor = document.getElementById('cursor');
+    const cursorBlur = document.getElementById('cursor-blur');
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let currentX = 0;
+    let currentY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursor.style.left = `${mouseX}px`;
+      cursor.style.top = `${mouseY}px`;
+    });
+
+    // Smooth lerp animation for secondary trail ring
+    function updateCursorTrail() {
+      currentX += (mouseX - currentX) * 0.15;
+      currentY += (mouseY - currentY) * 0.15;
+      
+      cursorBlur.style.left = `${currentX}px`;
+      cursorBlur.style.top = `${currentY}px`;
+      
+      requestAnimationFrame(updateCursorTrail);
+    }
+    updateCursorTrail();
+
+    // Hover state effects
+    const interactiveElements = document.querySelectorAll('a, button, input, textarea, select, [role="button"]');
+    interactiveElements.forEach((el) => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.width = '20px';
+        cursor.style.height = '20px';
+        cursor.style.backgroundColor = 'rgba(255,255,255,0.2)';
+        
+        cursorBlur.style.width = '60px';
+        cursorBlur.style.height = '60px';
+        const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--color-primary-glow').trim();
+        cursorBlur.style.borderColor = primaryColor;
+      });
+      
+      el.addEventListener('mouseleave', () => {
+        cursor.style.width = '8px';
+        cursor.style.height = '8px';
+        cursor.style.backgroundColor = '#fff';
+        
+        cursorBlur.style.width = '40px';
+        cursorBlur.style.height = '40px';
+      });
+    });
+
+
+    /* ---------------------------------------------------- */
+    /* 4. Multi-Theme Accent Switcher                       */
+    /* ---------------------------------------------------- */
+    const themes = ['cyberpunk', 'solargold', 'amethyst'];
+    let currentThemeIndex = 0;
+    const themeBtn = document.getElementById('theme-cycle-btn');
+    
+    // Set default initial theme
+    document.documentElement.setAttribute('data-theme', themes[currentThemeIndex]);
+
+    themeBtn.addEventListener('click', () => {
+      currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+      const targetTheme = themes[currentThemeIndex];
+      document.documentElement.setAttribute('data-theme', targetTheme);
+      
+      // Update cursor glow border color live
+      const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--color-primary-glow').trim();
+      cursorBlur.style.borderColor = primaryColor;
+      
+      // Trigger a mini animation indicator
+      themeBtn.classList.add('scale-110', 'rotate-45');
+      setTimeout(() => {
+        themeBtn.classList.remove('scale-110', 'rotate-45');
+      }, 300);
+
+      // Re-trigger estimator update to adapt colors
+      updateEstimator();
+    });
+
+
+    /* ---------------------------------------------------- */
+    /* 5. Mobile Menu Toggle                                */
+    /* ---------------------------------------------------- */
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const burgerTop = document.getElementById('burger-top');
+    const burgerMid = document.getElementById('burger-mid');
+    const burgerBot = document.getElementById('burger-bot');
+
+    let menuOpen = false;
+
+    mobileMenuBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        mobileMenu.classList.remove('hidden');
+        burgerTop.style.transform = 'translateY(9px) rotate(45deg)';
+        burgerMid.style.opacity = '0';
+        burgerBot.style.transform = 'translateY(-9px) rotate(-45deg)';
+      } else {
+        mobileMenu.classList.add('hidden');
+        burgerTop.style.transform = 'none';
+        burgerMid.style.opacity = '1';
+        burgerBot.style.transform = 'none';
+      }
+    });
+
+    // Close menu when clicking link
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuOpen = false;
+        burgerTop.style.transform = 'none';
+        burgerMid.style.opacity = '1';
+        burgerBot.style.transform = 'none';
+      });
+    });
+
+
+    /* ---------------------------------------------------- */
+    /* 6. Card Hover Tilt 3D Effect                         */
+    /* ---------------------------------------------------- */
+    function applyCardTilt() {
+      const cards = document.querySelectorAll('.tilt-card');
+      
+      cards.forEach((card) => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          
+          // Max rotation degrees
+          const maxRotate = 8;
+          const rotateX = ((centerY - y) / centerY) * maxRotate;
+          const rotateY = ((x - centerX) / centerX) * maxRotate;
+          
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.015, 1.015, 1.015)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        });
+      });
+    }
+    applyCardTilt();
+
+
+    /* ---------------------------------------------------- */
+    /* 7. Scroll Reveal & Stats Counter Intersection        */
+    /* ---------------------------------------------------- */
+    const revealElements = document.querySelectorAll('.reveal-element');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          
+          // If the element contains tools progress bar, animate it
+          const progressBars = entry.target.querySelectorAll('[data-progress]');
+          progressBars.forEach(bar => {
+            bar.style.width = bar.getAttribute('data-progress');
+          });
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach((el) => {
+      revealObserver.observe(el);
+    });
+
+    // Stats counter increment animation
+    function initStatsCounter() {
+      const statsElements = document.querySelectorAll('[data-target]');
+      
+      const statsObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const target = parseInt(entry.target.getAttribute('data-target'), 10);
+            let count = 0;
+            const speed = 2000 / target; // complete in 2 seconds
+            
+            const timer = setInterval(() => {
+              count++;
+              entry.target.innerText = count;
+              if (count >= target) {
+                clearInterval(timer);
+                entry.target.innerText = target; // Ensure perfect match
+              }
+            }, speed);
+            
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      statsElements.forEach(el => statsObserver.observe(el));
+    }
+
+
+    /* ---------------------------------------------------- */
+    /* 8. Interactive Social Growth Estimator System       */
+    /* ---------------------------------------------------- */
+    let currentPlatform = 'instagram';
+    
+    const platformMultipliers = {
+      instagram: { reach: 1.5, engagement: 0.08, growth: 0.06 },
+      facebook: { reach: 1.1, engagement: 0.06, growth: 0.04 },
+      youtube: { reach: 2.1, engagement: 0.12, growth: 0.08 }
+    };
+
+    function setEstimatorPlatform(platform, button) {
+      currentPlatform = platform;
+      
+      // Update platform button states
+      document.querySelectorAll('.platform-btn').forEach(btn => {
+        btn.className = "platform-btn p-2 sm:p-3 rounded-2xl border border-white/5 bg-white/5 text-gray-400 font-space text-[10px] sm:text-xs font-semibold tracking-wider flex flex-col items-center justify-center space-y-1 sm:space-y-2 hover:border-primary-glow transition-all duration-300";
+        // Reset child icon color
+        const icon = btn.querySelector('i');
+        icon.className = icon.className.replace('text-primary-glow', 'text-gray-400');
+      });
+
+      // Highlight active
+      button.className = "platform-btn p-2 sm:p-3 rounded-2xl border border-primary-glow bg-primary-glow/10 text-white font-space text-[10px] sm:text-xs font-semibold tracking-wider flex flex-col items-center justify-center space-y-1 sm:space-y-2 hover:border-primary-glow transition-all duration-300";
+      const activeIcon = button.querySelector('i');
+      activeIcon.className = activeIcon.className.replace('text-gray-400', 'text-primary-glow');
+
+      updateEstimator();
+    }
+
+    function updateEstimator() {
+      const followersVal = parseInt(document.getElementById('follower-range').value, 10);
+      const postsVal = parseInt(document.getElementById('posts-range').value, 10);
+
+      // Display formatted text
+      document.getElementById('follower-display').innerText = followersVal.toLocaleString();
+      document.getElementById('posts-display').innerText = postsVal;
+
+      // Calculate Outputs
+      const multiplier = platformMultipliers[currentPlatform];
+      
+      // 1. Monthly Reach Estimation
+      const reachResult = Math.round(followersVal * (postsVal * 0.22) * multiplier.reach);
+      
+      // 2. Engagement score Estimation
+      const engagementResult = Math.round(reachResult * multiplier.engagement * (1 + (postsVal * 0.03)));
+      
+      // 3. New Followers Acquisition Goal
+      const growthResult = Math.round(followersVal * multiplier.growth * (1 + (postsVal * 0.15)));
+
+      // Display results with dynamic counters
+      animateEstimatorResult('result-reach', reachResult);
+      animateEstimatorResult('result-engagement', engagementResult);
+      animateEstimatorResult('result-growth', growthResult);
+
+      // Animate indicators bars precisely
+      const maxReachPossible = 500000 * (21 * 0.22) * 2.1;
+      const maxEngagePossible = maxReachPossible * 0.12 * (1 + (21 * 0.03));
+      const maxGrowthPossible = 500000 * 0.08 * (1 + (21 * 0.15));
+
+      document.getElementById('reach-bar').style.width = `${Math.min((reachResult / maxReachPossible) * 100, 100)}%`;
+      document.getElementById('engagement-bar').style.width = `${Math.min((engagementResult / maxEngagePossible) * 100, 100)}%`;
+      document.getElementById('growth-bar').style.width = `${Math.min((growthResult / maxGrowthPossible) * 100, 100)}%`;
+    }
+
+    // Incremental animation helper for estimator digits
+    const activeAnimators = {};
+    function animateEstimatorResult(id, targetVal) {
+      if (activeAnimators[id]) clearInterval(activeAnimators[id]);
+      
+      const el = document.getElementById(id);
+      let currentVal = parseInt(el.innerText.replace(/,/g, ''), 10) || 0;
+      
+      if (currentVal === targetVal) {
+        el.innerText = targetVal.toLocaleString();
+        return;
+      }
+      
+      const step = Math.ceil(Math.abs(targetVal - currentVal) / 8);
+      
+      activeAnimators[id] = setInterval(() => {
+        if (currentVal < targetVal) {
+          currentVal = Math.min(currentVal + step, targetVal);
+        } else {
+          currentVal = Math.max(currentVal - step, targetVal);
+        }
+        el.innerText = currentVal.toLocaleString();
+        if (currentVal === targetVal) {
+          clearInterval(activeAnimators[id]);
+        }
+      }, 20);
+    }
+
+    // Initialize Estimator defaults
+    updateEstimator();
+
+
+    /* ---------------------------------------------------- */
+    /* 9. Contact Form & verification message system        */
+    /* ---------------------------------------------------- */
+    const contactForm = document.getElementById('contact-form');
+    const successContainer = document.getElementById('form-success-container');
+
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      
+      const submitBtn = document.getElementById('form-submit-btn');
+      // Show loading status inside button
+      submitBtn.innerHTML = `
+        <span class="absolute inset-0 bg-gradient-to-r from-primary-glow via-secondary-glow to-accent-glow rounded-full"></span>
+        <div class="px-8 py-4 rounded-full bg-[#050505] text-sm font-bold tracking-widest font-space text-white relative text-center">
+          CONNECTING CORE TRANSMITTER...
+        </div>
+      `;
+      
+      // Simulate server transmission delay
+      setTimeout(() => {
+        contactForm.classList.add('hidden');
+        successContainer.classList.remove('hidden');
+        submitBtn.classList.add('hidden');
+      }, 1500);
+    }
+
+    function resetContactForm() {
+      contactForm.reset();
+      contactForm.classList.remove('hidden');
+      successContainer.classList.add('hidden');
+      
+      const submitBtn = document.getElementById('form-submit-btn');
+      submitBtn.classList.remove('hidden');
+      submitBtn.innerHTML = `
+        <span class="absolute inset-0 bg-gradient-to-r from-primary-glow via-secondary-glow to-accent-glow rounded-full"></span>
+        <div class="px-8 py-4 rounded-full bg-[#050505] text-sm font-bold tracking-widest font-space text-white relative transition-all duration-300 group-hover:bg-transparent text-center">
+          ESTABLISH CONNECTION <i class="fa-solid fa-paper-plane ml-2"></i>
+        </div>
+      `;
+    }
+
+    /* Demo metrics alert */
+    function showDemoAlert(projectName) {
+      alert(`[Verification Metric Server]\nProject: ${projectName}\nData status: Active simulation verified.\nNo issues found on auditing path.`);
+    }
+  </script>
+</body>
+</html>
